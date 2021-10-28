@@ -52,7 +52,9 @@ def get_year(earthquake):
 
 def get_magnitude(earthquake):
     """Retrive the magnitude of an earthquake item."""
-    ...
+    magnitude = earthquake['properties']['mag']
+    return magnitude
+
 
 
 # This is function you may want to create to break down the computations,
@@ -89,7 +91,10 @@ unique_years = sorted(set(year))
 #print(year)
 year_count= {i:year.count(i) for i in unique_years}
 
-print(year_count)
+#print(year_count)
+
+magnitude = {i:get_year(quakes[i]), get_magnitude(quakes[i] for i in len(quakes))}
+print(magnitude)
 
 #for key in quakes:
     #print(len(key))
